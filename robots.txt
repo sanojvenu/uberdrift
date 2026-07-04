@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://uberdrift.com/sitemap.xml
