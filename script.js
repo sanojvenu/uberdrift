@@ -20,26 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Copy email to clipboard
-    const copyBtn = document.getElementById('copyEmailBtn');
-    if (copyBtn) {
-        copyBtn.addEventListener('click', () => {
-            const email = copyBtn.getAttribute('data-email');
-            navigator.clipboard.writeText(email).then(() => {
-                const textSpan = copyBtn.querySelector('.btn-text');
-                const originalText = textSpan.textContent;
-                textSpan.textContent = 'Email Copied!';
-                copyBtn.style.background = '#00ff88';
-                copyBtn.style.color = '#0a0a0a';
-                
-                setTimeout(() => {
-                    textSpan.textContent = originalText;
-                    copyBtn.style.background = 'var(--primary)';
-                    copyBtn.style.color = 'white';
-                }, 3000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        });
-    }
 });
