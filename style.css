@@ -342,3 +342,57 @@ body, html {
         font-size: 2.5rem;
     }
 }
+
+/* SEO Content Section */
+.seo-content {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 900px;
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.seo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .seo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.seo-box {
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.seo-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(249,0,77,0.2);
+}
+
+.seo-box h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-family: 'Syncopate', sans-serif;
+    letter-spacing: 1px;
+}
+
+.seo-box p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.seo-box strong {
+    color: white;
+}
